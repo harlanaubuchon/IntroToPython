@@ -53,7 +53,9 @@ words = in_data.split()
 
 # remove the bare single quotes
 # " ' " is both a quote and an apostrophe
-words = [word for word in words if word != "'"]# loop through the words
+words = [word for word in words if word != "'"]
+
+# loop through the words
 for i in range(len(words) - 2):
     pair = " ".join(words[i:i+2])
     follower = words[i+2]
@@ -65,9 +67,9 @@ for i in range(len(words) - 2):
 
 
 # A little reporting
-#for pair, followers in word_pairs.items():
-#    if len(followers) > 1:
-#        print pair, followers
+for pair, followers in word_pairs.items():
+    if len(followers) > 1:
+        print pair, followers
 
 # create some new text
 new_text = []        
