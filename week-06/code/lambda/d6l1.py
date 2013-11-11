@@ -22,8 +22,7 @@ def five(x):
 
 l = []
 
-def lambdaCall(x):
-	l.append(lambda x, i=e )
+def lambdaCall(n):
+	for i in range(n)
+	    l.append(lambda x, )
 	
-	for i in l:
-		print i(x)
