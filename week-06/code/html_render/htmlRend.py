@@ -4,7 +4,7 @@ import sys
 class Element(object):
 
 	tagName = 'html'
-	indentation = '    '
+	indent = '    '
 
 	def __init__(self, c=None):
 		self.clist = c
@@ -21,16 +21,18 @@ class Element(object):
 		file_out.write(fo + '/' + self.tagName + fc)
 
 
-if __name__ == "__main__":
 
-	f = open('htmlTest.html', 'w')
+if __name__ == "__main__":
+	import sys, cStringIO
+	f = cStringIO.StringIO()
 
 	page = Element()
 
 	page.append("Here is a paragraph of text -- there could be more of them, but this is enough  to show that we can do some text")
 
 	page.render(f)
-	
+
+	f.reset()	
 	print f.read()
-	f.reset()
+
 
